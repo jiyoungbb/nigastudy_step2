@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>텍스트 네비게이션</title>
+        <style>
+            *{ padding: 0; margin: 0; } 
+            li{ list-style: none; } 
+            a{ text-decoration: none; } 
+
+            .top_nav{ margin: 50px; }
+            .top_nav li{ 
+                float: left; padding: 0 10px; 
+                height: 14px; line-height: 14px;
+            }
+            .top_nav li::after{     /* li태그 뒤에 컨텐츠를 추가 */
+                content: '|';
+                color: #333; font-size: 8px;
+                position: relative; /* 상대적 이동 */
+                top: -2px; left: 10px;
+            }
+
+            .top_nav li:last-child::after{ content: '';}
+            .top_nav a{ color: #333; font-size: 14px; }
+        </style>
+    </head>
+    <body>
+        <div class="top_nav">
+            <ul>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">사이트맵</a></li>
+            </ul>
+        </div>
+    </body>
+</html>
+
+
+
+
+
+

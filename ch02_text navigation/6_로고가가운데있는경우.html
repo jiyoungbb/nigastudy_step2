@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>텍스트 네비게이션</title>
+        <style>
+            *{ padding: 0; margin: 0; }
+            li{ list-style: none; }
+            a{ text-decoration: none; }
+            
+            header{
+                width: 1180px; height: 100px;
+                background-color: beige; 
+                margin: 0 auto;
+
+                position: relative; /* 자손들의 앱솔루트 기준을 현재 요소로 변경 */
+            }
+            
+            .sns{ position: absolute; top: 0; left: 0; }
+            .top_nav{ position: absolute; top: 0; right: 0; }
+
+            header h1{ 
+                width: 100%; text-align: center; 
+                padding-top: 15px;
+            }
+            header li{ float: left; padding: 0 10px; line-height: 100px; }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="sns">
+                <ul>
+                    <li><a href="#">인스타그램</a></li>
+                    <li><a href="#">페이스북</a></li>
+                    <li><a href="#">트위터</a></li>
+                    <li><a href="#">블로그</a></li>
+                </ul>
+            </div>
+            <h1>
+                <a href="index.html">
+                    <img src="http://placehold.it/100x70" alt="로고">
+                </a>
+            </h1>
+            <div class="top_nav">
+                <ul>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">사이트맵</a></li>
+                </ul>
+            </div>
+        </header>
+    </body>
+</html>
+
+
+
+
+
+
