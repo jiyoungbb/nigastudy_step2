@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style>
+            *{padding: 0; margin: 0;}
+            li{list-style-type: none;}
+            a{text-decoration: none;}
+
+            header{
+                width: 1180px; height: 30px;
+                background-color: beige;
+                margin: 0 auto;
+            }
+
+            .top_nav{float: right;}
+
+            .top_nav li{
+                float: left;
+                padding: 0 10px;
+                height: 30px; line-height: 30px;
+            }
+            .top_nav li::after{
+                content: '|';
+                color: #333; font-size: 8px;
+                position: relative;
+                top: -2px; left: 10px;
+            }
+            .top_nav li:last-child::after{content: '';}
+
+            .top_nav a{ color: #333; font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="top_nav">
+                <ul>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">마이페이지</a></li>
+                </ul>
+            </div>
+    </header>
+    </body>
+</html>
