@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style>
+            form{padding: 10px;}
+            .circle{
+                display: inline-block;
+                width: 20px; height: 20px;
+                border: 1px solid #333;
+                border-radius: 50px;
+                position: relative;
+                top: 4px; left: 0;
+                background-image: url(../../images/check_gray.png);
+                background-size: 70%;   background-repeat: no-repeat;
+                background-position: center;
+            }
+            #chk:checked + .circle{
+                background-image: url(../../images/check_white.png);
+                background-color: navy;
+            }
+            #chk{ position: absolute; left: -999em;}
+        </style>
+    </head>
+    <body>
+        <form action="#">
+            <label for="chk">
+                <input type="checkbox" id="chk">
+                <i class="circle"></i>
+                <span>아이디 저장하기</span>
+            </label>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style>
+            form{padding: 10px;}
+            .circle{
+                display: inline-block;
+                width: 20px; height: 20px;
+                border: 2px solid #333;
+                box-sizing: border-box;
+                border-radius: 10px;
+                position: relative;
+                top: 4px;
+                cursor: pointer;
+            }
+            .circle::after{
+                content: '\2714';
+                font-size: 24px; color: #333;
+                position: absolute; top: -12px; left: 0;
+
+                opacity: 0;
+            }
+            #chk:checked + .circle::after{
+                opacity: 1;
+            }
+            #chk{ position: absolute; left: -999em;}
+        </style>
+    </head>
+    <body>
+        <form action="#">
+            <label for="chk">
+                <input type="checkbox" id="chk">
+                <i class="circle"></i>
+                <span>아이디 저장하기</span>
+            </label>
+        </form>
+    </body>
+</html>
