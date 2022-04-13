@@ -1,0 +1,74 @@
+<!-- Copyright ⓒ OSSAM(오쌤의니가스터디). All rights reserved. -->
+<!-- 유튜브주소 : https://www.youtube.com/channel/UCAi3huK5H9VOtB_J5tYk4qg -->
+<!-- 구독, 좋아요~ 부탁드려요 :) -->
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>hover 효과</title>
+        <style>
+            /* base */
+            *{ padding: 0; margin: 0; } /* 여백제거 */
+            li{ list-style: none; } /* 기호제거 */
+
+            .gallery{
+                width: 940px; 
+                border: 3px solid black;
+                margin: 0 auto; /* 블록요소 가운데처리 */
+                overflow: hidden; /* float받은 자손이나 후손의 높이도 인식 */
+            }
+            .gallery h3{
+                width: 100%; height: 50px;
+                text-align: center;
+                /* 높이와 줄간격을 같게 하면 한줄 텍스트 가운데 처리 */ 
+                line-height: 50px;
+            }
+            .gallery li{
+                float: left;
+                width: 300px; height: 200px;
+                margin-right: 20px;
+            }
+            .gallery li:last-child{ margin-right: 0; }
+
+            .gallery a{
+                display: block;
+                width: 100%; height: 100%;
+                overflow: hidden; /* 자손이 현재 요소보다 클때 안보이게 처리 */
+            }
+
+            /* CSS변화가 있을때 시간차를 줌 */
+            .gallery img{ transition: 0.3s; }
+            .gallery a:hover img, .gallery a:focus img{ /* a태그에 마우스를 올렸을 때 */
+                transform: scale(1.2);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="gallery">
+            <h3>유럽여행 갤러리</h3>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="../images/img01.jpg" alt="이미지01">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../images/img02.jpg" alt="이미지02">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../images/img03.jpg" alt="이미지03">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
+
+
+
+
+
+
