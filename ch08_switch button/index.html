@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Switch Button</title>
+        <style>
+            *{ padding: 0; margin: 0; }
+
+            .checkline{
+                width: 200px; padding: 10px;
+                margin: 20px; border: 1px solid #ccc;
+            }
+            #ipchk{ position: absolute; left: -999em; }
+            .checkline .circle{
+                display: inline-block; /* 영역처리 */
+                width: 40px; height: 20px;
+                background-color: #c6c6c6;
+                border-radius: 10px;
+                position: relative; top: 4px;
+                cursor: pointer; /* 마우스손모양처리 */
+            }
+            .checkline .circle:after{
+                content: '';/* 영역차지용이라 컨텐츠를 넣지 않음 */
+                width: 16px; height: 16px;
+                background-color: #fff;
+                border-radius: 8px;
+                box-shadow: 1px 1px 3px #999;
+
+                position: absolute; top: 2px; left: 2px;
+
+                transition: 0.2s; /* css에 변화에 시간차를 두는 속성 */
+            }
+
+            /* IP활성화 */
+            .checkline input:checked ~ .circle{
+                /* input태그가 체크되면 뒤에 있는 circle클래스선택 */
+                background-color: #03c75b;
+            }
+            .checkline input:checked ~ .circle:after{ left: 21px; }
+        </style>
+    </head>
+    <body>
+        <div class="checkline">
+            <label for="ipchk">
+                <input type="checkbox" id="ipchk">
+                <span class="text">IP보안</span>
+                <i class="circle"></i>
+            </label>
+        </div>
+    </body>
+</html>
