@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+/* base */
+*{ padding: 0; margin: 0; }
+
+/* 구성요소 레이아웃 */
+header{
+    width: 100%; 
+    min-width: 1180px; /* 창사이즈 1180보다 작을때 최소사이즈를 1180px로 처리 */
+    height: 115px;
+    border-bottom: 1px solid #ccc;
+}
+main{
+    width: 100%; min-width: 1180px;
+    height: 545px;
+
+    position: relative; /* 자손인 quick_menu의 앱솔루트 기준을 현재요소로 변경 */
+}
+.contents_top{
+    width: 100%; min-width: 1180px;
+    height: 460px;
+    padding: 40px 0; /* 앞상하 뒷좌우 */
+    box-sizing: border-box; /* 패딩수치를 높이 안으로 인사이드 처리 */
+    background-color: #f5fafe;
+}
+.contents_bottom{
+    width: 1180px; height: 290px;
+    padding: 40px 0 90px; /* 상 좌우 하 */
+    box-sizing: border-box;
+    margin: 0 auto; /* 블록요소를 부모영역의 가운데 처리 */
+}
+footer{
+    width: 100%; 
+    min-width: 1180px;
+    height: 210px;
+}
+.chat{
+    position: fixed; bottom: 100px;
+    right: calc(50% - 700px);
+    width: 80px; height: 110px;
+    background-color: cornflowerblue;
+}
+
+
+/* 행간레이아웃 */
+.h_top{
+    width: 100%; height: 35px;
+    background-color: #014bb4;
+}
+.h_bottom{
+    width: 1180px; height: 80px;
+    margin: 0 auto;
+    background-color: pink;
+}
+.m_slider{
+    width: 100%; height: 100%; /* 부모영역 전부 상속 처리 */
+    background-color: lightblue;
+}
+.quick_menu{
+    /* 기본기준 : body */
+    position: absolute; /* 형요소 위에 겹치게 처리 */
+    bottom: 0; 
+    left: 0; right: 0; margin: 0 auto;
+    width: 1180px; height: 110px;
+    background-color: #0e2f58;
+}
+.sitemap{
+    width: 100%; height: 50px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box; /* 테두리를 높이 안으로 인사이드 처리 */
+}
+.f_top{
+    width: 100%; height: 50px;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #ededed;
+}
+.f_bottom{
+    width: 100%; height: 110px;
+    background-color: #ededed;
+}
+
+.inner_wrap{
+    width: 1180px; /* 컨텐츠 최소사이즈 */
+    height: 100%; /* 부모영역 전체 상속 */
+    margin: 0 auto; /* 블록요소를 부모영역 가운데 처리 */
+    background-color: beige;
+}
+
+
+/* 열간레이아웃 - float방식 */
+.loan, .drive{
+    float: left; /* 부모영역의 왼쪽에 붙임 */
+    width: 380px; height: 100%;
+    margin-right: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.i_slider01{
+    float: right; /* 부모영역의 오른쪽에 붙임 */
+    width: 380px; height: 180px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.vision{
+    float: right;
+    width: 380px; height: 180px;
+    background-color: #b9e8f2;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contents_bottom > section{
+    float: left; /* 요소들을 수평나열 처리 */
+    width: 380px; height: 100%;
+    margin-right: 20px;
+    background-color: coral; /* 지울것 */
+}
+/* 마지막것의 여백 제거 */
+.contents_bottom > .sevice{ margin-right: 0; } 
