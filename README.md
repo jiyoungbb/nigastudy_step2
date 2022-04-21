@@ -1,4 +1,4 @@
-<h1>nigastudy</h1><br>
+<h1>nigastudy_step2</h1><br>
 
 <h2>목표</h2>
 <ul>
