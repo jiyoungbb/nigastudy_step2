@@ -1,0 +1,33 @@
+*{
+    list-style: none;
+    color: #000;
+    margin: 0; padding: 0;
+    text-decoration: none;
+}
+
+.login_box{
+    margin: 0 auto;
+    border: 1px solid #000;
+    width: 780px; height: 500px;
+}
+
+.login_box h2{
+    text-align: center;
+}
+
+.login_box fieldset{
+    border: none;
+}
+
+.login_box legend{
+    position: absolute;
+    left: -999;
+}
+
+.login_box label{
+    display: block;
+}
+
+ul li{
+    display: inline-block;
+}
